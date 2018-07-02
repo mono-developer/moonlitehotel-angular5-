@@ -1,0 +1,64 @@
+@import '../../../variables';
+.strength-download {
+  &__header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 14px;
+    color: $very-dark-gray;
+    padding: 0 40px;
+    border-bottom: 1px solid $border-gray;
+  }
+
+  &__provider {
+    width: 35%;
+  }
+
+  &__date {
+    width: 29%;
+  }
+  &__strengthes {
+    flex: 1;
+  }
+  &__download {
+    width: 65px;
+  }
+
+  &__item {
+    height: 57px;
+    display: flex;
+    align-items: center;
+    color: $very-dark-gray;
+    padding: 0 40px;
+    &:nth-child(even) {
+      background-color: $almost-white;
+    }
+  }
+  &__provider-content {
+    width: 35%;
+    font-size: 12px;
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+  }
+  &__date-content {
+    width: 29%;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+  &__strengthes-content {
+    flex: 1;
+    font-size: 11px;
+    line-height: 12px;
+    color: $very-dark-gray;
+    letter-spacing: 0.6px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+  &__download-content {
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

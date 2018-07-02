@@ -1,0 +1,15 @@
+<div class="message-tools">
+  <div class="message-tools__body">
+    <div class="message-tools__item" *ngFor="let item of downloads; trackBy: trackByIndex;">
+      <div class="message-tools__description-content">
+        <img src="{{ item.imgUrl }}" />
+        <span class="message-tools__description" l10nTranslate>{{ item.description }}</span>
+        <img src="assets/icons/faq-gray.svg" />
+        <a class="message-tools__link" l10nTranslate>{{ item.example ? 'profile_text_example' : 'common_text_overview' }}</a>
+      </div>
+      <div class="message-tools__download-content">
+        <button class="message-tools__download-button" l10nTranslate>{{ item.example ? 'common_copy_button' : 'common_learn_more_button' }}</button>
+      </div>
+    </div>    
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="class-tabs__header">
+  <div class="class-tabs__title" l10nTranslate>develop_class_experiences_title</div>
+  <div class="class-tabs__description" l10nTranslate>develop_facilitation_tailored_learning_needs</div>
+</div>
+<ngb-tabset class="class-tabs">
+  <ngb-tab>
+    <ng-template ngbTabTitle><span l10nTranslate>develop_in_person_classes</span></ng-template>
+    <ng-template ngbTabContent>
+      <app-class-table [classes]='personClasses' (clickClass)= "gotoClassDetail($event, 'in-person')"></app-class-table>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><span l10nTranslate>develop_virtual_classes</span></ng-template>
+    <ng-template ngbTabContent>
+      <app-class-table [classes]='virtualClasses' (clickClass)= "gotoClassDetail($event, 'virtual')"></app-class-table>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

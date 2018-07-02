@@ -1,0 +1,29 @@
+@import '../../../variables';
+.app-paging {
+  margin-top: 40px;
+}
+.custom-pagination {
+  .pagination {
+    justify-content: center;
+  }
+  .page-link {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: 1px solid $pagination-border-gray;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $pagination-border-gray;
+    margin-right: 11px;
+    outline: none !important;
+    box-shadow: none;
+    &:hover {
+      border-color: $medium-blue;
+      color: $medium-blue;
+      background: $white;
+    }
+
+  }
+}

@@ -1,0 +1,46 @@
+<div class="fluid-container main-container">
+  <div class="main-container__organization" l10nTranslate>
+    train_organization_facilitators
+  </div>
+  <div class="search-container">
+    <input type="search" class="search-container__search" name="search" placeholder="{{ 'common_button_search' | translate:lang }}" [(ngModel)]="searchValue" (keyup.enter)="searchFacilitator()" (keyup)='keyUp.next($event)'/>
+    <div class="search-container__button" (click)="searchFacilitator()">
+      <img class="search-container__img" src="assets/icons/search-gray.svg" />
+    </div>
+  </div>
+  <app-facilitator-information></app-facilitator-information>
+  
+
+  <div class="facilitators-list">
+    <div class="facilitators-list__header facilitator-row">
+      <div class="facilitator-row__name text-left" l10nTranslate>account_info_name</div>
+      <div class="facilitator-row__certification" l10nTranslate>navigation_certification</div>
+      <div class="facilitator-row__upcoming-classes" l10nTranslate>train_upcoming_classes</div>
+      <div class="facilitator-row__toolkits" l10nTranslate>train_text_toolkits</div>
+      <div class="facilitator-row__rate" l10nTranslate>train_rating_text</div>
+      <div class="facilitator-row__credit" l10nTranslate>train_sdi_credits_text</div>
+      <div class="facilitator-row__icon-area"></div>
+    </div>
+
+    <div class="facilitator-item facilitator-row" *ngFor = "let facilitator of searchedFacilitators; trackBy: trackByFacilitatorId;" routerLink="/facilitators/{{facilitator.id}}">
+      <div class="facilitator-row__name text-left">
+        <div class="facilitator-item__name">{{ facilitator.name }}</div>
+        <div class="facilitator-item__state">{{ facilitator.job_title }}</div>
+      </div>
+      <div class="facilitator-row__certification">
+        <div *ngFor="let item of facilitator.certifications; trackBy: trackByIndex;" [hidden]="!item.isVerified">{{ item.name }}</div>
+      </div>
+      <div class="facilitator-row__upcoming-classes">
+        {{ facilitator.upcoming_classes.length }}
+      </div>
+      <div class="facilitator-row__toolkits">
+        {{ facilitator.toolkits_count }}
+      </div>
+      <div class="facilitator-row__rate">{{ facilitator.rating }}</div>
+      <div class="facilitator-row__credit">{{ facilitator.credits_count }}</div>
+      <div class="facilitator-row__icon-area">
+        <img class="facilitator-item__img" src="assets/icons/dropdown-right.svg" />
+      </div>
+    </div>
+  </div>
+</div>

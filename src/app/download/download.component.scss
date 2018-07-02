@@ -1,0 +1,32 @@
+
+@import '../../variables';
+.download__header {
+  font-family: "proxima_novabold", Arial, sans-serif;
+  font-size: 24px;
+  color: $body-text-color;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px $border-gray;
+}
+
+.download__description {
+  padding: 30px 40px;
+}
+
+.download__title {
+  font-family: "proxima_novabold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: $body-text-color;
+}
+
+.download__content {
+  font-family: "proxima_novaregular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $very-dark-gray;
+  margin-top: 9px;
+}

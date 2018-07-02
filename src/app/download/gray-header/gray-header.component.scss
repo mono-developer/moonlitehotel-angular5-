@@ -1,0 +1,11 @@
+@import '../../../variables';
+.gray-header {
+  font-family: "proxima_novabold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: $body-text-color;
+  padding: 22px 40px;
+  background-color: $download-header-gray;
+  border-top: 1px solid $border-gray;
+  border-bottom: 1px solid $border-gray;
+}

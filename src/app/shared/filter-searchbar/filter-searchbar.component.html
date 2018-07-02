@@ -1,0 +1,12 @@
+<div class="filter-searchbar">
+  <div class="filter-searchbar__filter" (click)="open()">
+    <img class="filter-searchbar__filtericon" *ngIf="!isOpened" src="assets/icons/filter-white.svg" />
+    <img class="filter-searchbar__closeicon" *ngIf="isOpened" src="assets/icons/x-white.svg" />
+    <span class="filter-searchbar__title" l10nTranslate>common_text_filter</span>
+  </div>
+  <div class="filter-searchbar__search">
+    <input class="filter-searchbar__input" name="search" type="search" placeholder="{{ palcefolder | translate:lang }}" [(ngModel)]="searchValue" (keyup.enter)="searchUsers()" (keyup)='keyUp.next($event)'/>
+    <img class="filter-searchbar__searchicon" src="assets/icons/search-gray.svg" (click)="searchUsers()"/>
+  </div>
+  <div class="filter-searchbar__filter"></div>
+</div>

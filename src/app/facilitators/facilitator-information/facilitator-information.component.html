@@ -1,0 +1,52 @@
+<ngb-accordion class="information-accordian">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <div class="information-accordian__header">
+        <div l10nTranslate>train_add_facilitators</div>
+        <img class="information-accordian__upimg" src='assets/icons/chevron-up-white.svg' />
+        <img class="information-accordian__downimg" src='assets/icons/white-add.svg' />
+      </div>        
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <div class="information-accordian__body">
+        <div class="information-accordian__main-title" l10nTranslate>
+          train_after_certification_add
+        </div>
+        <div class="information-accordian__main-content">
+          <div class="information-accordian__partner">
+            <div class="rounded-circle">
+              <img class="information-accordian__profileimg" src="{{ partner.profile }}" />
+            </div>
+            <div class="information-accordian__sub-content">
+              <div class="sub-content__title" l10nTranslate>train_client_partner</div>
+              <div class="sub-content__name">{{ partner.name }}</div>
+              <div class="sub-content__state">{{ partner.job_title }}</div>
+              <div class="sub-content__location">{{ partner.region }}</div>
+              <div class="sub-content__mail">{{ partner.email }}</div>
+              <div class="sub-content__phone">{{ partner.phone }}</div>
+            </div>
+          </div>
+          <div class="information-accordian__support">
+            <div class="rounded-circle">
+              <img class="information-accordian__profileimg" src="{{ supportUser.profile }}" />
+            </div>
+            <div class="information-accordian__sub-content">
+              <div class="sub-content__title" l10nTranslate>train_client_support</div>
+              <div class="sub-content__name">{{ supportUser.name }}</div>
+              <div class="sub-content__state">{{ supportUser.job_title }}</div>
+              <div class="sub-content__location">{{ supportUser.region }}</div>
+              <div class="sub-content__mail">{{ supportUser.email }}</div>
+              <div class="sub-content__phone">{{ supportUser.phone }}</div>
+            </div>
+          </div>
+          <div class="information-accordian__office information-accordian__sub-content">
+            <div class="sub-content__title" l10nTranslate>train_core_strengths_office</div>
+            <div class="sub-content__state">Carlsband, Califonia USA</div>
+            <div class="sub-content__mail">support@corestrengths.com</div>
+            <div class="sub-content__phone">760-602-0086</div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

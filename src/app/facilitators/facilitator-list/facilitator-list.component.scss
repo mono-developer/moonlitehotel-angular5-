@@ -1,0 +1,111 @@
+@import '../../../variables';
+.main-container {
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__organization {
+    font-size: 24px;
+    font-family: "proxima_novabold", Arial, sans-serif;
+    color: $body-text-color;
+    height: 96px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }    
+}
+
+
+.search-container {
+  height: 58px;
+  background-color: $body-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__search {
+    height: 34px;
+    width: 320px;
+    border: 1px solid rgba(194, 194, 194, 0.66);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    font-size: 15px;
+    padding-left: 10px;
+    outline: none;
+  }
+
+  &__button {
+    width: 44px;
+    height: 34px;
+    background-color: $white;
+    border: 1px solid rgba(194, 194, 194, 0.66);
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    height: 21px;
+  }
+
+}
+
+.facilitators-list{
+  &__header {
+    
+    height: 50px;
+    width: 100%;
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 14px;
+    color: $very-dark-gray;
+    background-color: $list-header;       
+    
+  }
+
+}
+
+.facilitator-row {
+  padding: 0 26px 0 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid $border-gray;
+  &__name {
+    width: 22%;
+  }
+  &__certification, &__toolkits, &__rate {
+    width: 13.5%;
+  }
+  &__upcoming-classes {
+    width: 20%;
+  }
+  &__credit {
+    flex: 1;
+  }
+  &__icon-area {
+    width: 22px;
+  }
+}
+
+.facilitator-item {
+  color: $body-text-color;
+  font-family: "proxima_novaregular", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  height: 75px;    
+
+  &__name {
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    font-size: 14px;
+  }
+  &__state {
+    font-size: 14px;
+  }            
+  &__img {
+    display: block;
+  }
+}

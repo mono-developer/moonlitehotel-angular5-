@@ -1,0 +1,45 @@
+@import '../../../variables';
+.cert-ribbon {
+  width: 115px;
+  height: 215px;
+  background-image: url('/assets/icons/badge.svg');
+  background-size: 100% 100%;
+  margin-top: -1px;
+  padding: 14px 0 0 3px;
+  color: $white;
+  text-align: center;
+
+  &__premier  {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 4px;
+    font-family: "proxima_novabold", Arial, sans-serif;
+  }
+  &__facilitator {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1.6px;
+    margin-top: 2px !important;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+
+  &__divider {
+    width: 73px;
+    height: 2px;
+    border: solid 1px $white;
+    margin: 8px auto 0 auto;
+  }
+
+  &__image {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__title {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    line-height: 15px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+}

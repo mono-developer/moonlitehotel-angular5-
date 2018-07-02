@@ -1,0 +1,27 @@
+<div class="user-row" [ngClass]="{'is-coach': !isCoach}">
+  <div class="user-row__checkmark" *ngIf="actionBtn" (click)="onCheckUser()">
+    <div *ngIf="!user.checked" class="user-row__noncheckmark"></div>
+    <img *ngIf="user.checked" class="user-row__checkmarkimg" src="assets/icons/checkmark-sqare-black.svg" />
+  </div>
+  <div class="user-row__avatar">
+    <img class="user-row__profileimg" src="{{ user.profile }}" />
+  </div>
+  <div class="user-row__name">
+    <div class="user-row__fullname">{{ user.firstName }} {{ user.lastName }}</div>
+    <div class="user-row__state">{{ user.title }}</div>
+  </div>
+  <div class="user-row__motive">
+    <div [innerHTML]="user.mvs | appMotivesHtml"></div>
+  </div>
+  <div *ngIf="isCoach" class="user-row__coach">
+    {{ user.coach }}
+  </div>
+
+  <div class="user-row__icon-area">
+    <img *ngIf="user.role === 'coach'" class="user-row_img" (click)="onClickUserAction()" src="assets/icons/dropdown-right.svg" />
+    <button *ngIf="userBtn" class="user-row__actionbtn" l10nTranslate (click)="onClickUserAction()">{{ userBtn }}</button>
+  </div>
+  <div class="user-row__context-menu" *ngIf="contextMenu">
+    <app-user-row-context-menu [isCoach]="!!user.coach"></app-user-row-context-menu>
+  </div>
+</div>

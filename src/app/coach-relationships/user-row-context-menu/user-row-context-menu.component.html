@@ -1,0 +1,9 @@
+<div ngbDropdown class="context-menu" [ngClass]="{'width-200': isCoach}">
+  <img src="assets/icons/settings-gray.svg" id="dropdownblock" ngbDropdownToggle />
+  <div ngbDropdownMenu aria-labelledby="dropdownblock">
+    <div class="dropdown-body">
+      <button class="context-menu__menubutton" l10nTranslate>view_profile</button>
+      <button *ngIf="isCoach" class="context-menu__menubutton" l10nTranslate>coach_archive_coaching_relationship</button>
+    </div>            
+  </div>
+</div>

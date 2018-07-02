@@ -1,0 +1,12 @@
+<ngb-tabset class="class-tab">
+  <ngb-tab title="{{ 'train_upcoming_classes' | translate:lang }}">
+    <ng-template ngbTabContent>
+      <app-class-table [items]= "facilitator.upcoming_classes"></app-class-table>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="{{ 'train_previous_classes' | translate:lang }}">
+    <ng-template ngbTabContent>
+      <app-class-table [items]= "facilitator.previous_classes"></app-class-table>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

@@ -1,0 +1,20 @@
+<div class="container-fluid class-table">
+  <div class="row class-table__header">
+    <div class="class-table__title" l10nTranslate>common_text_class_name</div>
+    <div class="col" l10nTranslate>train_group_text</div>
+    <div class="col" l10nTranslate>train_class_location</div>
+    <div class="col" l10nTranslate>common_text_class_date</div>
+    <div class="col" l10nTranslate>train_class_incomplete_text</div>
+  </div>
+  <div class="class-table__body">
+    <div class="row class-table__item" *ngFor="let item of items; trackBy: trackByIndex;">
+      <div class="class-table__name">
+        <div class="text-truncate">{{ item.name }}</div>
+      </div>
+      <div class="col">{{ item.group_name }}</div>
+      <div class="col">{{ item.location }}</div>
+      <div class="col">{{ item.date | date: "dd MMM yyyy" }}</div>
+      <div class="col">{{ item.count }} / <span class="class-table__incomplete">{{ item.incompleted }}</span></div>
+    </div>
+  </div> 
+</div>

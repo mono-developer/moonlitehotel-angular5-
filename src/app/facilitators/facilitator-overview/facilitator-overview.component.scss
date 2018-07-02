@@ -1,0 +1,178 @@
+@import '../../../variables';
+.facilitator-overview {
+  height: 239px;
+  background-color: $background-second-color;
+  border-bottom: 1px solid $border-gray;
+  display: flex;
+  text-align: center;
+
+  &__avatar {
+    padding: 19px 15px 0 15px;
+    min-width: 162px;
+    background: $white;
+  }
+
+  &__profileimg {
+    width: 86px;
+    height: 86px;
+  }
+  &__username {
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 15px;
+    color: $very-dark-gray;
+  }
+
+  &__motives, &__conflict {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  &__avatar-label {
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    width: 50%;
+    text-align: right;
+    color: $medium-gray;
+  }
+
+  &__avatar-content {
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    padding-left: 5px;
+    color: $body-text-color;
+    width: 50%;
+    text-align: left;
+
+    &__font15 {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    &__font14 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .blue {
+      color: $motive_blue;
+    }
+    .green {
+      color: $motive_green;
+    }
+    .red {
+      color: $motive_red;
+    }
+
+  }
+
+  &__motives {
+    margin-top: 5px;
+  }
+
+  &__ribbon {
+    color: $white;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 0 10px;        
+  }
+
+  &__id-title {
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.6px;
+  }
+
+  &__id-content {
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  &__training, &__trained, &__available {
+    color: $white;
+    padding-top: 24px;
+  }
+
+  &__main-title {
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+  &__main-content {
+    margin-top: 21px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__rate-number {
+    font-size: 48px;
+    line-height: 58px;
+    padding-right: 5px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+
+  &__rate-graph {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__rate-title {
+    font-size: 10px;
+    line-height: 16px;
+    font-family: "proxima_novamedium", Arial, sans-serif;
+  }
+
+  &__count {        
+    &--mt21 {
+      margin-top: 21px;
+    }
+    &--mt25 {
+      margin-top: 25px;
+    }
+    &--mt29 {
+      margin-top: 29px;
+    }
+
+    &-number {
+      display: inline-block;
+      line-height: 49px;
+      font-size: 40px;
+      font-family: "proxima_novamedium", Arial, sans-serif;
+
+      &--bb2 {
+        line-height: 33px;
+        border-bottom: 2px solid $white;
+      }
+    }
+
+    &-title {
+      font-size: 11px;
+      line-height: 13px;
+      font-family: "proxima_novaregular", Arial, sans-serif;
+      text-transform: uppercase;
+
+      &--lh25 {
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__training {
+    flex: 1;
+  }
+
+  &__trained, &__available {
+    width: 18.5%;
+  }
+
+  &__available {
+    border-left: 2px solid $medium-blue;
+  }
+}

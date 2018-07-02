@@ -1,0 +1,122 @@
+@import '../../../variables';
+.class-overview {
+  display: flex;
+  padding: 30px;
+  background-color: $extra-light-gray;
+  width: 100%;
+  height: 260px;
+  // position: relative;
+  .clss-overview-info {
+    flex: 1;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    color: $very-dark-gray;
+    display: flex;
+    flex-direction: column;
+    &__semibold {
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+    }
+
+    &__title {
+      color: $medium-blue;
+      font-size: 18px;
+      line-height: 18px;
+      font-family: "proxima_novabold", Arial, sans-serif;
+      margin-bottom: 10px;
+    }
+
+    &__date {
+      display: flex;
+      align-items: baseline;
+    }
+    &__date-array {
+      flex: 1;
+      padding-left: 3px;
+    }
+
+    &__id {
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+      font-size: 11px;
+      line-height: 13px;
+      color: $medium-gray;
+      flex: 1;
+      align-items: flex-end;
+      display: flex;
+    }
+  }
+
+  &__divider {
+    width: 2px;
+    height: 70px;
+    background-color: $header-border-color;
+    margin-top: 34px;
+  }
+
+  .class-overview-facilitator {
+    flex: 1;
+    padding-left: 68px;
+    color: $very-dark-gray;
+    &__title {
+      font-size: 18px;
+      line-height: 18px;
+      font-family: "proxima_novabold", Arial, sans-serif;
+      margin-bottom: 10px;
+    }
+    &__body {
+      display: flex;
+    }
+
+    &__avatar {
+      width: 60px;
+      margin: auto 0;
+    }
+
+    &__profileimg {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__content {
+      flex: 1;
+      padding-left: 12px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__name {
+      font-family: "proxima_novabold", Arial, sans-serif;
+    }
+    &__state {
+      font-family: "proxima_novaregular", Arial, sans-serif;
+    }
+
+    &__motive {
+      font-size: 15px;      
+    }
+    &__motive, &__conflict {
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+      text-transform: uppercase;
+      .blue {
+        color: $motive_blue;
+      }
+      .green {
+        color: $motive_green;
+      }
+      .red {
+        color: $motive_red;
+      }
+    }
+
+    &__category {
+      font-size: 12px;
+      font-family: "proxima_novaregular", Arial, sans-serif;
+      line-height: 18px;
+    }
+
+    &__seperate {
+      margin-left: -3px;
+    }
+
+  }
+}

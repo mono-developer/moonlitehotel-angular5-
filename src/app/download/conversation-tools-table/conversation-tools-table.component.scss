@@ -1,0 +1,39 @@
+@import '../../../variables';
+.converstation-tools {
+  &__item {
+    height: 57px;
+    display: flex;
+    align-items: center;
+    color: $very-dark-gray;
+    border-bottom: 1px solid $border-gray;
+    padding: 0 47px 0 40px;
+  }
+  &__description-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  &__description {
+    font-size: 12px;
+    line-height: 14px;
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+  }
+  &__link {
+    font-size: 11px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    color: $medium-blue !important;
+    text-decoration: underline;
+    line-height: 13px;
+    margin-left: 2px;
+  }
+
+  &__download-content {
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+  }
+  &__android {
+    width: 85px;
+    object-fit: contain;
+  }
+}

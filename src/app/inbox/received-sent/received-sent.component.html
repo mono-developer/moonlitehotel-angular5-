@@ -1,0 +1,35 @@
+<ngb-tabset class="received-sent">
+    <ngb-tab>
+      <ng-template ngbTabTitle><span l10nTranslate>inbox_received_text</span></ng-template>
+      <ng-template ngbTabContent>
+        <app-tab-page-header [state]="0 + state"></app-tab-page-header>
+        <app-filter-searchbar [palcefolder]="state? 'inbox_search_connections': 'inbox_search_invitations'" (openFilter)="onOpenFilter($event)"></app-filter-searchbar>
+        <div class="received-sent__body">
+          <div class="received-sent__filter" [ngClass]="{'received-sent__filter--opened': isOpenedFilter}">
+            <app-filter></app-filter>
+          </div>
+          <div class="received-sent__content">
+            <app-connections-received *ngIf="state"></app-connections-received>
+            <app-invitations-received *ngIf="!state"></app-invitations-received>
+          </div>
+        </div>
+        
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><span l10nTranslate>inbox_sent_text</span></ng-template>
+      <ng-template ngbTabContent>
+        <app-tab-page-header [state]="2 + state"></app-tab-page-header>
+        <app-filter-searchbar [palcefolder]="state? 'inbox_search_connections': 'inbox_search_invitations'" (openFilter)="onOpenFilter($event)"></app-filter-searchbar>
+        <div class="received-sent__body">
+          <div class="received-sent__filter" [ngClass]="{'received-sent__filter--opened': isOpenedFilter}">
+            <app-filter></app-filter>
+          </div>
+          <div class="received-sent__content">
+            <app-connections-sent *ngIf="state"></app-connections-sent>
+            <app-invitations-sent *ngIf="!state"></app-invitations-sent>
+          </div>
+        </div>        
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>

@@ -1,0 +1,64 @@
+<div class="invitation-sent">
+  <div class="invitation-sent__header">
+    <div class="invitation-sent__avatar"></div>
+    <div class="invitation-sent__from">
+      <span l10nTranslate>inbox_sent_to</span>
+      <img class="invitation-sent__dropdownimg" [ngClass]="{'isSorted' : this.sortOrders[0]}" src="assets/icons/dropdown-active.svg" (click)="onOrderInvitations(0)" />
+    </div>
+    <div class="invitation-sent__due">
+      <span l10nTranslate>common_text_due_date</span>
+      <img class="invitation-sent__dropdownimg" [ngClass]="{'isSorted' : this.sortOrders[1]}" src="assets/icons/dropdown-active.svg" (click)="onOrderInvitations(1)" />
+    </div>
+    <div class="invitation-sent__event">
+      <span l10nTranslate>inbox_event_date</span>
+      <img class="invitation-sent__dropdownimg" [ngClass]="{'isSorted' : this.sortOrders[2]}" src="assets/icons/dropdown-active.svg" (click)="onOrderInvitations(2)" />
+    </div>
+    <div class="invitation-sent__status">
+      <span l10nTranslate>common_text_status</span>
+      <img class="invitation-sent__dropdownimg" [ngClass]="{'isSorted' : this.sortOrders[3]}" src="assets/icons/dropdown-active.svg" (click)="onOrderInvitations(3)" />
+    </div>
+    <div class="invitation-sent__buttons"></div>
+  </div>
+  <div class="invitation-sent__body">
+    <div class="invitation-sent__item" *ngFor="let invitation of searchedInvitations; trackBy: trackById;">
+      <div class="invitation-sent__avatar">
+        <img class="invitation-sent__profileimg" src="{{ invitation.avatarImageUrl }}" />
+      </div>
+      <div class="invitation-sent__frombody">
+        <div class="invitation-sent__name">{{ invitation.firstName }} {{ invitation.lastName }}</div>
+        <div class="invitation-sent__action">{{ invitation.invitationType }}</div>
+      </div>
+      <div class="invitation-sent__due invitation-sent__due--body">
+        {{ invitation.dueDate | date : 'd MMM, yyyy' }}
+      </div>
+      <div class="invitation-sent__event invitation-sent__event--body">
+        {{ invitation.eventDate | date : 'd MMM, yyyy' }}
+      </div>
+
+      <div class="invitation-sent__statusarray">
+        <div>
+          <div class="invitation-sent__statusitem" *ngFor="let status of invitation.shortStatuses; trackBy: trackByIndex;">
+            <span l10nTranslate>{{ status.type }}</span>: {{ status.date | date : 'd MMM, yyyy' }}
+          </div>
+        </div>
+        
+        <a *ngIf="invitation.needsReminder" class="invitation-sent__reminditem" l10nTranslate>
+          inventory_remind_text
+        </a>
+      </div>
+      <div class="invitation-sent__buttons">
+        <div ngbDropdown class="invitation-sent__dropdownmenu">
+          <img src="assets/icons/settings-gray.svg" id="dropdownblock" ngbDropdownToggle />
+          <div ngbDropdownMenu aria-labelledby="dropdownblock">
+            <div class="dropdown-body">
+                <button class="invitation-received__button" l10nTranslate>train_view_results</button>
+                <button class="invitation-received__button" l10nTranslate>inbox_go_to_reminder</button>
+                <button class="invitation-received__button" l10nTranslate>inbox_go_to_invitation</button>
+                <button class="invitation-received__button" l10nTranslate>inbox_ignore_button</button>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>

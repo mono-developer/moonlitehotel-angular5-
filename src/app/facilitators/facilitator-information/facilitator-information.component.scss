@@ -1,0 +1,133 @@
+@import '../../../variables';
+
+.information-accordian {
+  .card {
+    border: none;
+    border-radius: 0;
+  }
+  .card-body {
+    color: $white;
+    padding: 0;
+    margin-top: -1px;        
+  }
+  .card-header {
+    height: 50px;
+    padding: 0;
+    background-color: $medium-blue;
+    border-radius: 0;
+    a {
+      text-decoration: none;
+    }
+
+    &.active {
+      .information-accordian__upimg {
+        display: block;
+      }
+      .information-accordian__downimg {
+        display: none;
+      }
+    }       
+  }
+
+  &__header {
+    font-size: 18px;
+    line-height: 22px;
+    color: $white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    font-family: "proxima_novabold", Arial, sans-serif;
+  }
+
+  &__upimg {
+    margin-left: 6px;
+    display: none;
+  }
+  &__downimg {
+    margin-left: 6px;
+    display: block;
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, $background-first-color, $medium-blue);
+    padding-top: 34px;
+  }
+  
+  &__main-title {
+    font-size: 14px;
+    line-height: 17px;                
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    text-align: center;
+  }
+
+  &__main-content {
+    padding-left: 53px;
+    margin-top: 38px;
+    display: flex;        
+  }
+
+  &__partner {
+    width: 30%;
+    display: flex;
+  }
+  &__support {
+    width: 38%;
+    display: flex;
+  }
+
+  &__office {
+    flex: 1;
+  }
+  
+  &__profileimg {
+    margin-top: 3px;
+    width: 50px;
+  }
+
+  &__sub-content {
+    padding-left: 10px;
+  }
+  .sub-content{
+    &__title {
+      font-size: 18px;
+      line-height: 18px;
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+    }
+    &__name {
+      margin-top: 3px;
+      font-size: 18px;
+      line-height: 18px;
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+    }
+    &__state {
+      margin-top: 5px;
+      font-size: 13px;
+      line-height: 13px;
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+    }
+
+    &__location {
+      font-size: 10px;
+      line-height: 13px;
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+    }
+
+    &__mail, &__phone {
+      font-size: 12px;
+      line-height: 15px;
+      font-family: "proxima_novaregular", Arial, sans-serif;
+    }
+    &__mail {
+      margin-top: 7px;
+      text-decoration: underline;
+    }
+    &__phone {
+      margin-bottom: 40px;
+    }
+  }
+}
+

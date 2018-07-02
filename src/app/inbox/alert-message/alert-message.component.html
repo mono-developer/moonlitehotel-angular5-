@@ -1,0 +1,15 @@
+<div class="alert-message">
+  <div class="alert-message__header">
+    <img class="alert-message__megaphone" src="assets/icons/megaphone-white.svg" />
+    <div class="alert-message__title">
+      {{ alert.title }}
+    </div>
+    <img class="alert-message__close" src="assets/icons/x-white.svg" (click)="onClose()"/>
+
+  </div>
+  <div class="alert-message__body">
+    <ul class="alert-message__list">
+      <li class="alert-message__item" [innerHTML]="item" *ngFor="let item of alert.messages; trackBy: trackByIndex;"></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="cert-ribbon">
+  <div class="cert-ribbon__header">
+    <div class="cert-ribbon__premier" l10nTranslate>train_text_premier</div>
+    <div class="cert-ribbon__facilitator" l10nTranslate>train_text_facilitator</div>
+  </div>
+  <div class="cert-ribbon__divider"></div>
+  <div class="cert-ribbon__body">
+    <div class="pt-3" *ngFor="let cert of certs; trackBy: trackByIndex;" [hidden]='!cert.isVerified'>
+      <div class="d-inline-block">
+        <img class="cert-ribbon_image" src="assets/icons/train-star.svg" alt="star-white"/>
+      </div>
+      <div class="cert-ribbon__title">
+        {{ cert.name }} <span l10nTranslate>train_text_certified</span>
+      </div>
+    </div>
+  </div>
+</div>

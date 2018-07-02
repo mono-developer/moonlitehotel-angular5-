@@ -1,0 +1,10 @@
+<div class="class-work">
+  <div class="class-work__body">
+    <div class="class-work__title" l10nTranslate>{{ work.title }}</div>
+    <div class="class-work__content" *ngIf="work.content1" l10nTranslate>{{ work.content1 }}</div>
+    <div class="class-work__content" [innerHTML]="work.content2"></div>
+  </div>
+  <div class="class-work__icon">
+    <img src="assets/icons/dropdown-right.svg" (click)="onClick()"/>
+  </div>
+</div>

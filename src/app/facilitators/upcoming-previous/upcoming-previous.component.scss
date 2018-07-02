@@ -1,0 +1,27 @@
+@import '../../../variables';
+.class-tab {
+  .nav-tabs {
+    border-bottom: 1px solid $header-border-color;
+    padding: 33px 0 0 26px;
+    
+    .nav-item {
+      margin: 0;
+      font-family: "proxima_novabold", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      margin-right: 32px;
+      
+    }
+    .nav-link {
+      padding: 0 0 13px;
+      border: none;
+      color: $medium-gray;
+      line-height: 20px;
+
+      &.active {
+        border-bottom: 3px solid $medium-blue;
+        color: $medium-blue;
+      }
+    }
+  }
+}

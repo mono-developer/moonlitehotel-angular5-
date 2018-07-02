@@ -1,0 +1,120 @@
+@import '../../../variables';
+.connection-sent {
+  &__header {
+    height: 50px;
+    display: flex;
+    padding: 0 25px;
+    background-color: $almost-white;
+    border-bottom: 2px solid $border-gray;
+    font-size: 14px;
+    font-family: "proxima_novabold", Arial, sans-serif;
+    color: $very-dark-gray;
+  }
+
+  &__avatar {
+    width: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__sendto {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--body {
+      font-size: 14px;
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+      color: $very-dark-gray;
+    }
+  }
+
+  &__status {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__dropdown {
+    width: 11px;
+    height: 11px;
+    margin-left: 3px;
+    transition: transform 0.2s ease-in-out 0.1s;
+    transform: rotate(0deg);
+
+    &.isSorted {
+      transition: transform 0.2s ease-in-out 0.1s;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__buttons {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    height: 80px;
+    display: flex;
+    padding: 0 25px;
+    background-color: $white;
+    border-bottom: 2px solid $border-gray;
+  }
+
+  &__profileimg {
+    width: 48px;
+    height: 48px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+
+  &__statusarray {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 12px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    color: $body-text-color;
+
+    
+  }
+
+  &__statusitem {
+    line-height: 15px;
+    &:last-child {
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+    }
+  }
+
+  &__button {
+    width: 83px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid $medium-gray;
+    font-family: "proxima_novamedium", Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+
+    &--withdraw {
+      color: $medium-gray;
+    }
+
+    &--remind {
+      color: $medium-blue;
+      border-color: $medium-blue;
+      margin-left: 12%;
+    }
+  }
+
+}

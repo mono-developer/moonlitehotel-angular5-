@@ -1,0 +1,19 @@
+
+@import '../../../variables';
+.alphabet-nav {
+ right: 0px;
+ top: 0px;
+ width: 40px;
+ height: 503px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ font-family: "proxima_novasemibold", Arial, sans-serif;
+ font-size: 10px;
+ color: $medium-gray;
+ 
+ &__item {
+   width: 100%;
+   text-align: center;
+ }
+}

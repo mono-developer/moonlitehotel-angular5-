@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Element/Icon/checkmark-sqare-Gray</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Element/Icon/checkmark-sqare-Gray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-22" fill="#9B9B9B" x="0" y="0" width="22" height="22"></rect>
+        <g id="check-circle-08" transform="translate(5.000000, 7.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M11.216129,0.7 L4.11935484,7.79677419 C4.0483871,7.86774194 3.97741935,7.90322581 3.87096774,7.90322581 C3.76451613,7.90322581 3.69354839,7.86774194 3.62258065,7.79677419 L0.783870968,4.95806452 C0.641935484,4.81612903 0.641935484,4.60322581 0.783870968,4.46129032 C0.925806452,4.31935484 1.13870968,4.31935484 1.28064516,4.46129032 L3.87096774,7.0516129 L10.7193548,0.203225806 C10.8612903,0.0612903226 11.0741935,0.0612903226 11.216129,0.203225806 C11.3580645,0.34516129 11.3580645,0.558064516 11.216129,0.7 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

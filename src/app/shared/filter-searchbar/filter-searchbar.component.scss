@@ -1,0 +1,49 @@
+@import '../../../variables';
+.filter-searchbar {
+  padding: 0 25px;
+  height: 57px;
+  background-color: $very-dark-gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__filter {
+    width: 90px;
+    display: flex;    
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    color: $white;
+    margin-left: 10px;
+  }
+
+  &__search {
+    width: 368px;
+    height: 33px;
+    background: $white;
+    border-radius: 5px;
+    border: 1px solid $search-border;
+    display: flex;
+  }
+  &__input {
+    height: 100%;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    font-size: 15px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    &::placeholder {
+      color: $medium-gray;
+    }
+  }
+
+  &__searchicon {
+    height: 100%;
+    width: 33px;
+    padding: 7px;
+  }
+}

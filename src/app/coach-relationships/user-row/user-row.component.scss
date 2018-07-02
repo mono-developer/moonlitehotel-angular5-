@@ -1,0 +1,103 @@
+@import '../../../variables';
+.user-row {
+  display: flex;
+  height: 80px;
+  padding: 0 10px 0 25px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 14px;
+  border-bottom: 2px solid $border-gray;
+  &__checkmark {
+    width: 31px;
+    padding-right: 12px;
+  }
+
+  &__checkmarkimg {
+    width: 19px;
+    border-radius: 4px;
+  }
+  &__noncheckmark {
+    width: 19px;
+    height: 19px;
+    border-radius: 4px;
+    border: 1px solid $medium-gray;
+  }
+  &__avatar {
+    width: 62px;
+    padding: 0 12px 0 0;
+  }
+  &__profileimg {
+    width: 48px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  &__name {
+    width: 22%;
+  }
+
+  &__fullname {
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    color: $very-dark-gray;
+  }
+
+  &__state {
+    margin-top: 3px;    
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    color: $very-dark-gray;
+  }
+
+  &__motive {
+    width: 18%;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    .blue {
+      color: $motive_blue;
+    }
+    .green {
+      color: $motive_green;
+    }
+    .red {
+      color: $motive_red;
+    }
+  }
+  &__coach {
+    width: 18%;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    color: $body-text-color;
+  }
+  &__context-menu {
+    padding-left: 10px;
+    width: 30px;
+  }
+  &__icon-area {
+    flex: 1;
+    text-align: right;
+  }
+
+  &__actionbtn {
+    font-size: 11px;
+    line-height: 13px;
+    font-family: "proxima_novamedium", Arial, sans-serif;
+    color: $white;
+    background-color: $black;
+    padding: 6px 25px;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+
+  }
+
+
+  &.is-coach {
+    .user-row__name {
+      width: 25%;
+    }
+
+    .user-row__motive {
+      width: 25%;
+    }
+    .user-row__coach {
+      display: none !important;
+    }
+
+  }
+}

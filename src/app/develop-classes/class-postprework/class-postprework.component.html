@@ -1,0 +1,6 @@
+<app-error-alert *ngIf="isAlert" (closeAlert)="onCloseAlert()"></app-error-alert>
+<app-back-header [title]="headerTitle"></app-back-header>
+<app-class-overview [class]="class"></app-class-overview>
+<app-class-work class="app-prework" [work]="prework" *ngFor="let prework of preworks; trackBy: trackByIndex;" (clickActive)="onClickActive($event)"></app-class-work>
+<div class="session-title" *ngIf="category === 'virtual'" l10nTranslate>develop_sessions_text</div>
+<app-session-table *ngIf="category === 'virtual'"></app-session-table>

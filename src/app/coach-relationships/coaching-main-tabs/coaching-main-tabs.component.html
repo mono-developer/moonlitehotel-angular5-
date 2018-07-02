@@ -1,0 +1,18 @@
+<ngb-tabset class="coaching-main-tab">
+    <ngb-tab>
+      <ng-template ngbTabTitle>
+        <span l10nTranslate>coach_my_coaching_relationships</span>
+      </ng-template>
+      <ng-template ngbTabContent>
+        <app-coaching-sub-tabs [organization]="'org'"></app-coaching-sub-tabs>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle>
+        <span l10nTranslate>account_account_coaching_relationships</span>
+      </ng-template>
+      <ng-template ngbTabContent>
+        <app-coaching-sub-tabs [organization]="'org_admin'"></app-coaching-sub-tabs>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>

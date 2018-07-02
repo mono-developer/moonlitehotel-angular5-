@@ -1,0 +1,11 @@
+<app-coach-header *ngIf="!!config.headerTitle" [title]="config.headerTitle"></app-coach-header>
+<app-filter-searchbar [palcefolder]="config.filterPlaceholderTxt" (openFilter)="onOpenFilter($event)"></app-filter-searchbar>
+<app-relationship-button *ngIf="config.isRelationShipBtn" [org]="config.org"></app-relationship-button>
+<div class="coaching-comp__body">
+  <div class="coaching-comp__filter" [ngClass]="{'coaching-comp__filter--opened': isOpenedFilter}">
+    <app-coach-filter></app-coach-filter>
+  </div>
+  <div class="coaching-comp__table">
+    <app-user-table [users]="searchedUsers" [config]="config"></app-user-table>
+  </div>
+</div>

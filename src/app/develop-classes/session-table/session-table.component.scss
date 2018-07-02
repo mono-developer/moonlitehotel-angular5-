@@ -1,0 +1,67 @@
+@import '../../../variables';
+.session-table {
+  &__header {
+    display: flex;
+    height: 51px;
+    padding: 0 25px;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    border-bottom: 1px solid $border-gray;
+    background-color: $session-header-bg;
+    font-family: "proxima_novabold", Arial, sans-serif;
+  }
+
+  &__id {
+    width: 11.5%;
+  }
+  &__date {
+    width: 14%;
+  }
+
+  &__time {
+    width: 12.5%;
+  }
+
+  &__title {
+    width: 15%;
+  }
+
+  &__description {
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 17px;
+  }
+
+  &__recording {
+    width: 9.5%;
+    min-width: 65px;
+    display: flex;
+  }
+  &__recording-time {
+    font-size: 9px;
+    line-height: 11px;
+    margin-top: 3px;
+    color: $session_recording_color;
+  }
+
+  &__recording-content {
+    text-align: center;
+    width: auto;
+  }
+
+  &__item {
+    display: flex;
+    height: 80px;
+    padding: 0 25px;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    border-bottom: 1px solid $border-gray;
+    background-color: $white;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    color: $body-text-color;
+  }
+}

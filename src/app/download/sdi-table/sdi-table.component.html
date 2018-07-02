@@ -1,0 +1,24 @@
+<div class="sdi-table">
+  <div class="sdi-table__header">
+    <div class="sdi-table__version" l10nTranslate>profile_version_text</div>
+    <div class="sdi-table__date" l10nTranslate>profile_date_text</div>
+    <div class="sdi-table__motives" l10nTranslate>navigation_motives</div>
+    <div class="sdi-table__conflict" l10nTranslate>navigation_conflict</div>
+    <div class="sdi-table__strengths" l10nTranslate>navigation_strengths</div>
+    <div class="sdi-table__download" l10nTranslate>account_edit_profile_download</div>
+
+  </div>
+  <div class="sdi-table__body">
+    <div class="sdi-table__version-content" l10nTranslate>{{ inventory.version }}</div>
+    <div class="sdi-table__date-content">{{ inventory.date | date: "dd MMM yyyy" }}</div>
+    <div class="sdi-table__motives-content" [innerHTML]="inventory.motives | appMotivesHtml"></div>
+    <div class="sdi-table__conflict-content" [innerHTML]="inventory.conflicts | appConflict"></div>
+    <div class="sdi-table__strengths-content">
+      <div *ngFor="let item of inventory.strengths; trackBy: trackByIndex;" l10nTranslate>{{ item }}</div>
+    </div>
+    <div class="sdi-table__download-content">
+      <img src="assets/icons/download.svg" />
+    </div>
+
+  </div>
+</div>

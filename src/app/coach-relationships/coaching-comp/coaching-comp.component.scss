@@ -1,0 +1,20 @@
+@import '../../../variables';
+.coaching-comp {
+  &__body {
+    display: flex;
+    width: 100%;
+  }
+  &__filter {
+    width: 0px;
+    transition-property: width;
+    transition-duration: 0.5s;
+    &--opened {
+      width: 175px;
+    }
+  }
+  &__table {
+    flex: 1;
+    background-color: $white;
+    z-index: 100;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="class-overview">
+  <div class="clss-overview-info">
+    <div class="clss-overview-info__title">{{ class.name }}</div>
+    <div class="clss-overview-info__item">
+      <span class="clss-overview-info__semibold" l10nTranslate>train_group_name_text</span>: {{ class.group }}
+    </div>
+    <div class="clss-overview-info__item">
+      <span class="clss-overview-info__semibold" l10nTranslate>common_text_class_type</span>: {{ class.type }}
+    </div>
+    <div class="clss-overview-info__item">
+      <span class="clss-overview-info__semibold" l10nTranslate>train_location_text</span>: {{ class.location }}
+    </div>
+    <div class="clss-overview-info__date">
+      <div class="clss-overview-info__date-title">
+        <span class="clss-overview-info__semibold" l10nTranslate>common_text_class_date</span>:
+      </div>
+      <div class="clss-overview-info__date-array">
+        <div *ngFor="let date of class.date; trackBy: trackByIndex;">{{ date.start | date : 'd MMM. yyyy h:mm a' }} - {{ date.end | date : 'h:mm a' }}</div>
+      </div>
+    </div>
+    <div class="clss-overview-info__item">
+      <span class="clss-overview-info__semibold" l10nTranslate>train_pre_work_due</span>: {{ class.prework | date : 'd MMM. yyyy' }}
+    </div>
+    <div class="clss-overview-info__item">
+      <span class="clss-overview-info__semibold" l10nTranslate>account_info_language</span>: <span l10nTranslate> {{ class.language }}</span>
+    </div>
+    <div class="clss-overview-info__id">
+      <span l10nTranslate>common_text_class_id</span>: {{ class.id }}
+    </div>
+  </div>
+  <div class="class-overview__divider"></div>
+  <div class="class-overview-facilitator">
+    <div class="class-overview-facilitator__title" l10nTranslate>train_text_facilitator</div>
+    <div class="class-overview-facilitator__body">
+      <div class="class-overview-facilitator__avatar">
+        <img class="class-overview-facilitator__profileimg" src="{{ class.facilitator.profile }}" />
+      </div>
+      <div class="class-overview-facilitator__content">
+        <div class="class-overview-facilitator__name">{{ class.facilitator.name }}</div>
+        <div class="class-overview-facilitator__state">{{ class.facilitator.title }}</div>
+        <div class="class-overview-facilitator__motive" [innerHtml]='class.facilitator.motive | appMotivesHtml'></div>
+        <div class="class-overview-facilitator__conflict" [innerHtml]='class.facilitator.conflict | appConflict'></div>
+        <div class="class-overview-facilitator__category">
+          <span *ngFor="let item of class.facilitator.categories; trackBy: trackByIndex; let index = index;">
+            <span l10nTranslate>{{ item }}</span>
+            <span class="class-overview-facilitator__seperate" *ngIf="index !== class.facilitator.categories.length - 1">,</span>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

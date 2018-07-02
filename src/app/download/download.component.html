@@ -1,0 +1,26 @@
+<div class="download-container">
+  <div class="download__header" l10nTranslate>
+    develop_downloads_title
+  </div>
+  <div class="download__description">
+    <div class="download__title" l10nTranslate>
+      develop_your_downloads
+    </div>
+    <div class="download__content">
+      <div l10nTranslate>develop_your_downloads_description1</div>
+      <div [innerHTML]="description"></div>
+    </div>
+  </div>
+  <app-gray-header [title]="'discover_sections_reasons_walkthrough_title'"></app-gray-header>
+  <app-sdi-table></app-sdi-table>
+  <app-gray-header [title]="'train_360_feedback'"></app-gray-header>
+  <app-strength-download [type]="'360'" [downloads]="downloads360"></app-strength-download>
+  <app-gray-header [title]="'train_role_expectations'"></app-gray-header>
+  <app-strength-download [type]="'role'" [downloads]="downloadsRole"></app-strength-download>
+  <app-gray-header [title]="'profile_meeting_tools_title'"></app-gray-header>
+  <app-meeting-tools-table [downloads]="meetingTools"></app-meeting-tools-table>
+  <app-gray-header [title]="'profile_message_tools_title'"></app-gray-header>
+  <app-message-tools-table [downloads]="messageTools"></app-message-tools-table>
+  <app-gray-header [title]="'profile_conversation_tools_title'"></app-gray-header>
+  <app-conversation-tools-table></app-conversation-tools-table>
+</div>

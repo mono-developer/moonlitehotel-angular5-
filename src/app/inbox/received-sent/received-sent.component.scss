@@ -1,0 +1,47 @@
+@import '../../../variables';
+.received-sent {
+  .nav-tabs {
+    padding-left: 25px;
+    border-bottom: 2px solid $border-gray;
+  }
+  .nav-item {
+    width: auto;
+    margin: 0 32px 0 0;
+
+    .nav-link {
+      background-color: $white;
+      font-size: 16px;
+      font-family: "proxima_novabold", Arial, sans-serif;
+      color: $medium-gray;
+      border: none; 
+      border-bottom: 3px solid transparent;
+      border-radius: 0px;
+      display: flex;
+      align-items: center;
+      padding: 16px 0 16px 0;
+
+      &.active {
+        background-color: $white;
+        border-color: $medium-blue;
+        color: $medium-blue;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__filter {
+    width: 0px;
+    transition-property: width;
+    transition-duration: 0.5s;
+    &--opened {
+      width: 175px;
+    }
+  }
+  &__content {
+    flex: 1;
+    background-color: $white;
+  }
+}

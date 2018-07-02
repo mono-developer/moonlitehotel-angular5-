@@ -1,0 +1,45 @@
+@import '../../../variables';
+.class-table {    
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  .row {
+    padding: 0 20px 0 26px;
+    margin: 0;
+  }
+
+  .col {
+    padding: 0;
+  }
+
+  &__header {
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0.04);        
+    font-family: "proxima_novabold", Arial, sans-serif;
+    color: $very-dark-gray;
+    border-bottom: 1px solid $header-border-color;
+    align-items: center;        
+  }
+
+  &__title {
+    width: 23%;
+  }
+
+  &__item {
+    height: 78px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+    color: $body-text-color;
+    border-bottom: 1px solid $border-gray;
+    align-items: center;     
+  }
+
+  &__name {
+    color: $medium-blue;
+    width: 23%;
+    padding-right: 20px;
+  }
+
+  &__incomplete {
+    color: $alert-error-background-color;
+  }
+}

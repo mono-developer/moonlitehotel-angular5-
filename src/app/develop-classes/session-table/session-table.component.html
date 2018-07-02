@@ -1,0 +1,23 @@
+<div class="session-table">
+  <div class="session-table__header">
+    <div class="session-table__id" l10nTranslate>develop_session_text</div>
+    <div class="session-table__date" l10nTranslate>profile_date_text</div>
+    <div class="session-table__time" l10nTranslate>develop_time_text</div>
+    <div class="session-table__title" l10nTranslate>account_info_title</div>
+    <div class="session-table__description" l10nTranslate>train_description_text</div>
+    <div class="session-table__recording" l10nTranslate>develop_recording_text</div>
+  </div>
+  <div class="session-table__item" *ngFor="let item of sessions; trackBy: trackByIndex;">
+    <div class="session-table__id">{{ item.id }}</div>
+    <div class="session-table__date">{{ item.date | date : 'd MMM. yyyy' }}</div>
+    <div class="session-table__time">{{ item.date | date : 'h:mm a' }}</div>
+    <div class="session-table__title" l10nTranslate>{{ item.title }}</div>
+    <div class="session-table__description">{{ item.description }}</div>
+    <div class="session-table__recording">
+      <div class="session-table__recording-content">
+        <img src="assets/icons/playbutton.svg" />
+        <div class="session-table__recording-time">{{ item.recording }}</div>
+      </div>      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+
+<div *ngIf="userRole === 'coach'">
+  <app-coaching-sub-tabs></app-coaching-sub-tabs>
+</div>
+<div *ngIf="userRole === 'org_admin'">
+  <app-coaching-main-tabs></app-coaching-main-tabs>
+</div>

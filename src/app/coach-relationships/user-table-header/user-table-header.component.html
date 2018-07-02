@@ -1,0 +1,17 @@
+<div class="user-table-header" [ngClass]="{'is-coach': !config.coachVisible}">
+  <div class="user-table-header__checkmark" *ngIf="config.actionBtnText" (click)="onClickSelectAll()">
+    <div *ngIf="!selected" class="user-table-header__noncheckmark"></div>
+    <img *ngIf="selected" class="user-table-header__checkmarkimg" src="assets/icons/checkmark-sqare-black.svg" />
+    <span class="user-table-header__seletall" l10nTranslate>teams_select_all</span>
+  </div>
+
+  <div class="user-table-header__null" *ngIf="!config.actionBtnText"></div>
+  <div class="user-table-header__name" l10nTranslate>account_info_name</div>
+  <div class="user-table-header__motive" l10nTranslate>discover_sections_motives_display_name</div>
+  <div *ngIf="config.coachVisible" class="user-table-header__coach" l10nTranslate>navigation_coach</div>
+  <div class="user-table-header__buttons" *ngIf="config.actionBtnText">
+    <button class="user-table-header__actionbtn" l10nTranslate (click)="onClickAction()">{{ config.actionBtnText }}</button>
+  </div>
+  <div class="user-table-header__context-menu" *ngIf="config.contextMenu && !!config.userBtn">
+  </div>
+</div>

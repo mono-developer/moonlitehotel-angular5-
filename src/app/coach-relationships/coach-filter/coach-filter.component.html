@@ -1,0 +1,95 @@
+<div class="app-filter">
+  <button class="app-filter__reset" l10nTranslate>reset_filters</button>
+  <div class="app-filter__divider"></div>
+
+  <div class="app-filter__title" l10nTranslate>common_text_labels</div>
+  <div ngbDropdown class="app-filter__dropdown">
+    <div class="app-filter__dropdown-btn" id="select-label" ngbDropdownToggle>
+      <span class="app-filter__dropdown-label" l10nTranslate>common_text_select_labels</span>
+      <img class="app-filter__dropdown-img" src="assets/icons/dropdown-active-white.svg" />
+    </div>
+    <div class="app-filter__dropdown-body" ngbDropdownMenu aria-labelledby="select-label">
+        <div class="app-filter__dropdown-checkbox" *ngFor="let item of labels; trackBy: trackByIndex;" (click)="onCheckFilter(item)">
+          <img *ngIf="item.checked" class="app-filter__dropdown-checkbox__checked-icon" src="assets/icons/checkmark-sqare-black.svg" />
+          <div *ngIf="!item.checked" class="app-filter__dropdown-checkbox__none-icon app-filter__none-icon"></div>
+          <span class="app-filter__dropdown-checkbox__checkbox-title" l10nTranslate>{{ item.label }}</span>
+        </div>
+    </div>
+  </div>
+  <div class="app-filter__divider"></div>
+  <div class="app-filter__title" l10nTranslate>account_edit_profile_tab_classes</div>
+  <div class="app-filter__filterbody">
+    <div class="app-filter__classes" *ngFor="let item of classes; trackBy: trackByIndex;" (click)="onRadioFilter(item)">
+      <div class="app-filter__checkbox">
+        <img *ngIf="item.checked" class="app-filter__checked-icon" src="assets/icons/checkmark-circle-black.svg" />
+        <div *ngIf="!item.checked" class="app-filter__none-icon app-filter__none-icon--radius50"></div>
+        <span class="app-filter__checkbox-title" l10nTranslate>{{ item.label }}</span>
+      </div>
+      <div *ngIf="item.checked">
+        <div class="app-filter__subcheckbox" *ngFor="let cert of item.items; trackBy: trackByIndex;" (click)="onCheckFilter(cert)">
+          <img *ngIf="cert.checked" class="app-filter__checked-icon" src="assets/icons/checkmark-sqare-black.svg" />
+          <div *ngIf="!cert.checked" class="app-filter__none-icon"></div>
+          <span class="app-filter__checkbox-title" l10nTranslate>{{ cert.label }}</span>
+        </div>
+      </div>      
+    </div>
+  </div>
+  
+  <div class="app-filter__divider"></div>
+
+  <div class="app-filter__title" l10nTranslate>discover_sections_motives_display_name</div>
+  <div class="app-filter__filterbody">
+    <div class="app-filter__checkbox" *ngFor="let item of motives; trackBy: trackByIndex;" (click)="onCheckFilter(item)">
+      <img *ngIf="item.checked" class="app-filter__checked-icon" src="assets/icons/checkmark-sqare-black.svg" />
+      <div *ngIf="!item.checked" class="app-filter__none-icon"></div>
+      <span class="app-filter__checkbox-title" l10nTranslate>{{ item.label }}</span>
+    </div>
+  </div>
+
+  <div class="app-filter__divider"></div>
+
+  <div class="app-filter__title" l10nTranslate>compare_button_conflict</div>
+  <div class="app-filter__filterbody">
+    <div class="app-filter__conflict-checkbox" *ngFor="let item of conflict; trackBy: trackByIndex;" (click)="onCheckFilter(item)">
+      <img *ngIf="item.checked" class="app-filter__checked-icon" src="assets/icons/checkmark-sqare-black.svg" />
+      <div *ngIf="!item.checked" class="app-filter__none-icon"></div>
+      <span class="app-filter__checkbox-title" l10nTranslate>{{ item.label }}</span>
+    </div>
+  </div>
+
+  <div class="app-filter__divider"></div>
+
+  <div class="app-filter__title" l10nTranslate>filter_inventories_completed</div>
+  <div class="app-filter__filterbody">
+    <div class="app-filter__checkbox" *ngFor="let item of inventories; trackBy: trackByIndex;" (click)="onRadioInventories(item)">
+      <img *ngIf="item.checked" class="app-filter__checked-icon" src="assets/icons/checkmark-circle-black.svg" />
+      <div *ngIf="!item.checked" class="app-filter__none-icon app-filter__none-icon--radius50"></div>
+      <span class="app-filter__checkbox-title" l10nTranslate>{{ item.label }}</span>
+    </div>
+  </div>
+
+  <div class="app-filter__divider"></div>
+
+  <div class="app-filter__title" l10nTranslate>compare_top_3_strengths</div>
+  <div class="app-filter__filterbody">
+    <div class="app-filter__checkbox" *ngFor="let item of topStrengths; trackBy: trackByIndex;">
+      <img *ngIf="item.checked" class="app-filter__checked-icon" src="assets/icons/checkmark-sqare-black.svg" (click)="onCheckFilter(item)"/>
+      <div *ngIf="!item.checked" class="app-filter__none-icon" (click)="onCheckFilter(item)"></div>
+      <div ngbDropdown class="app-filter__strength-dropdown">
+        <div class="app-filter__dropdown-btn" id="select-label" ngbDropdownToggle>
+          <span class="app-filter__dropdown-label" l10nTranslate>compare_select_strength</span>
+          <img class="app-filter__dropdown-img" src="assets/icons/dropdown-active-white.svg" />
+        </div>
+        <div class="app-filter__dropdown-body" ngbDropdownMenu aria-labelledby="select-label">
+            <div class="app-filter__dropdown-checkbox" *ngFor="let item of labels; trackBy: trackByIndex;" (click)="onCheckFilter(item)">
+              <img *ngIf="item.checked" class="app-filter__dropdown-checkbox__checked-icon" src="assets/icons/checkmark-sqare-black.svg" />
+              <div *ngIf="!item.checked" class="app-filter__dropdown-checkbox__none-icon app-filter__none-icon"></div>
+              <span class="app-filter__dropdown-checkbox__checkbox-title" l10nTranslate>{{ item.label }}</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-filter__divider"></div>
+</div>
+

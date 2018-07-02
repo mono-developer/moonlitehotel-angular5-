@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Element/Icon/checkmark-circle-black</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Element/Icon/checkmark-circle-black" fill="#474747" fill-rule="nonzero">
+            <g id="check-circle-08">
+                <path d="M11,0 C4.93225806,0 0,4.93225806 0,11 C0,17.0677419 4.93225806,22 11,22 C17.0677419,22 22,17.0677419 22,11 C22,4.93225806 17.0677419,0 11,0 Z M16.216129,7.7 L9.11935484,14.7967742 C9.0483871,14.8677419 8.97741935,14.9032258 8.87096774,14.9032258 C8.76451613,14.9032258 8.69354839,14.8677419 8.62258065,14.7967742 L5.78387097,11.9580645 C5.64193548,11.816129 5.64193548,11.6032258 5.78387097,11.4612903 C5.92580645,11.3193548 6.13870968,11.3193548 6.28064516,11.4612903 L8.87096774,14.0516129 L15.7193548,7.20322581 C15.8612903,7.06129032 16.0741935,7.06129032 16.216129,7.20322581 C16.3580645,7.34516129 16.3580645,7.55806452 16.216129,7.7 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

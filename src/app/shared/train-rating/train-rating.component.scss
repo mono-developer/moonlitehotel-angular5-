@@ -1,0 +1,30 @@
+$height: 20%;
+@mixin getBarHeight($i) {
+  height: $height * $i;
+}
+
+.train-rating {
+  width: 37px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &__bar {
+    width: 5px;
+    background-color: white;
+
+    &--deactive {
+      background-color: transparent;
+    }
+  }
+
+  $class-slug: "&__bar";
+  $stop-loop:  5;
+
+  @for $i from 1 through $stop-loop {
+    #{$class-slug}--#{$i} {
+      @include getBarHeight($i);
+    }
+  }
+}

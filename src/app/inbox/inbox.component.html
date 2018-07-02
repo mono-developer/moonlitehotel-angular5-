@@ -1,0 +1,25 @@
+<div class="inbox-header" l10nTranslate>account_edit_profile_inbox</div>
+<div class="inbox-alert">
+  <app-alert-message class="inbox-alert__container" *ngIf="isOpenAlert" (close)="onCloseAlert($event)"></app-alert-message>
+</div>
+
+<ngb-tabset class="inbox-tab">
+  <ngb-tab>
+    <ng-template ngbTabTitle>
+      <span l10nTranslate>inbox_manage_invitations</span>
+      <app-badge [count]='999'></app-badge>
+    </ng-template>
+    <ng-template ngbTabContent>
+      <app-received-sent [state]="0"></app-received-sent>      
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle>
+      <span l10nTranslate>navigation_manage_connections</span>
+      <app-badge [count]='1'></app-badge>
+    </ng-template>
+    <ng-template ngbTabContent>
+      <app-received-sent [state]="1"></app-received-sent>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

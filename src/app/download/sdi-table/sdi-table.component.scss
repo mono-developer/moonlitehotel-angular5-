@@ -1,0 +1,91 @@
+@import '../../../variables';
+.sdi-table {
+  &__header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 14px;
+    color: $very-dark-gray;
+    padding: 0 40px;
+    border-bottom: 1px solid $border-gray;
+  }
+
+  &__version {
+    width: 16%;
+  }
+  &__date {
+    width: 19%;
+  }
+  &__motives {
+    width: 15%;
+  }
+
+  &__conflict {
+    width: 14%;
+  }
+
+  &__strengths {
+    flex: 1;
+  }
+  &__download {
+    width: 65px;
+  }
+
+  &__body {
+    height: 57px;
+    display: flex;
+    align-items: center;
+    color: $very-dark-gray;
+    padding: 0 40px;
+  }
+  &__version-content {
+    width: 16%;
+    font-size: 12px;
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+  }
+  &__date-content {
+    width: 19%;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+  &__motives-content {
+    width: 15%;
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    font-size: 12px;
+  }
+  &__conflict-content {
+    width: 14%;
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    font-size: 12px;
+  }
+
+  &__conflict-content, &__motives-content {
+    text-transform: uppercase;
+    .blue {
+      color: $motive_blue !important;
+    }
+    .green {
+      color: $motive_green !important;
+    }
+    .red {
+      color: $motive_red !important;
+    }
+  }
+  &__strengths-content {
+    flex: 1;
+    font-size: 11px;
+    line-height: 12px;
+    color: $very-dark-gray;
+    letter-spacing: 0.6px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+  &__download-content {
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+
+}

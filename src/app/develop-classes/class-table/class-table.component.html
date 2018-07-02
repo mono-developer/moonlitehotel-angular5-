@@ -1,0 +1,20 @@
+<div class="class-table">
+  <div class="class-table__header">
+    <div class="class-table__name" l10nTranslate>common_text_class_name</div>
+    <div class="class-table__group" l10nTranslate>train_group_text</div>
+    <div class="class-table__date" l10nTranslate>develop_class_dates</div>
+    <div class="class-table__location" l10nTranslate>train_class_location</div>
+    <div class="class-table__prework" l10nTranslate>develop_pre_work_text</div>
+    <div class="class-table__icon"></div>
+  </div>
+  <div class="class-table__item" *ngFor="let item of classes; trackBy: trackByIndex;" [ngClass]="{'is_upcoming': getUpcoming(item.date[0].start)}" (click)="onClickClass(item.id)">
+    <div class="class-table__name">{{ item.name }}</div>
+    <div class="class-table__group">{{ item.group }}</div>
+    <div class="class-table__date">{{ item.date[0].start | date : 'd MMM. yyyy' }}</div>
+    <div class="class-table__location">{{ item.location }}</div>
+    <div class="class-table__prework">{{ item.prework | date : 'd MMM. yyyy' }}</div>
+    <div class="class-table__icon">
+      <img src="assets/icons/dropdown-right.svg" />
+    </div>
+  </div>
+</div>

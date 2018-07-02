@@ -1,0 +1,20 @@
+<div class="strength-download">
+  <div class="strength-download__header">
+    <div class="strength-download__provider" l10nTranslate>profile_provider</div>
+    <div class="strength-download__date" l10nTranslate>profile_date_text</div>
+    <div class="strength-download__strengthes" l10nTranslate>{{ header }}</div>
+    <div class="strength-download__download" l10nTranslate>account_edit_profile_download</div>
+  </div>
+  <div class="strength-download__body">
+    <div class="strength-download__item" *ngFor="let item of downloads; trackBy: trackByIndex;">
+      <div class="strength-download__provider-content">{{ item.provider }}</div>
+      <div class="strength-download__date-content">{{ item.date | date: "dd MMM yyyy" }}</div>
+      <div class="strength-download__strengthes-content">
+        <div *ngFor="let strength of item.strengths; trackBy: trackByIndex;" l10nTranslate>{{ strength }}</div>
+      </div>
+      <div class="strength-download__download-content">
+        <img src="assets/icons/download.svg" />
+      </div>
+    </div>    
+  </div>
+</div>

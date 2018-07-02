@@ -1,0 +1,58 @@
+@import '../../../variables';
+.class-table {
+  &__header {
+    display: flex;
+    height: 51px;
+    padding: 0 25px;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    border-bottom: 1px solid $border-gray;
+    background-color: $almost-white;
+    font-family: "proxima_novabold", Arial, sans-serif;
+  }
+
+  &__name {
+    width: 23%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 25px;
+  }
+  &__group {
+    width: 16%;
+  }
+
+  &__date {
+    width: 16%;
+  }
+
+  &__location {
+    width: 19%;
+  }
+
+  &__prework {
+    flex: 1;
+  }
+
+  &__icon {
+    width: 22px;
+  }
+
+  &__item {
+    display: flex;
+    height: 80px;
+    padding: 0 25px;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    border-bottom: 1px solid $border-gray;
+    background-color: $white;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+
+    &.is_upcoming {
+      background-color: $upcoming_bg-color;
+      color: $medium-blue;
+    }
+  }
+}

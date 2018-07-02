@@ -1,0 +1,17 @@
+@import '../../../variables';
+.user-table { 
+
+  &__body {
+    width: 100%;
+    display: flex;
+  }
+  &__list {
+    flex: 1;
+  }
+
+  &__alphabet {
+    position: relative;
+    width: 41px;
+    padding-top: 15px;
+  }
+}

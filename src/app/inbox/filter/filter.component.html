@@ -1,0 +1,17 @@
+<div class="app-filter">
+  <button class="app-filter__reset" l10nTranslate>reset_filters</button>
+  <div class="app-filter__divider"></div>
+  <div class="app-filter__type">Type</div>
+  <div class="app-filter__mainfilter" *ngFor="let filter of filters; trackBy: trackByIndex;">
+    <div class="app-filter__title">{{ filter.title }}</div>
+    <div class="app-filter__filterbody">
+      <div class="app-filter__checkbox" *ngFor="let item of filter.filterItems; trackBy: trackByIndex;" (click)="onCheckFilter(item)">
+        <img *ngIf="item.checked" class="app-filter__checked-icon" src="assets/icons/checkmark-sqare-black.svg" />
+        <div *ngIf="!item.checked" class="app-filter__none-icon"></div>
+        <span class="app-filter__checkbox-title">{{ item.label }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="app-filter__divider1"></div>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="meeting-tools">
+  <div class="meeting-tools__header">
+    <div class="meeting-tools__type" l10nTranslate>profile_text_type</div>
+    <div class="meeting-tools__download" l10nTranslate>account_edit_profile_download</div>
+  </div>
+  <div class="meeting-tools__body">
+    <div class="meeting-tools__item" *ngFor="let item of downloads; trackBy: trackByIndex;">
+      <div class="meeting-tools__type-content" l10nTranslate>{{ item.type }}</div>
+      <div class="meeting-tools__download-content">
+        <img src="assets/icons/download.svg" />
+      </div>
+    </div>    
+  </div>
+</div>

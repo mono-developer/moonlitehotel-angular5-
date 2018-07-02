@@ -1,0 +1,26 @@
+<ngb-tabset class="coaching-sub-tabs">
+  <ngb-tab>
+    <ng-template ngbTabTitle><span l10nTranslate>coach_coaching_roster</span></ng-template>
+    <ng-template ngbTabContent>
+      <app-coaching-comp [config]="rosterConfig"></app-coaching-comp>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><span l10nTranslate>train_invitations_text</span></ng-template>
+    <ng-template ngbTabContent>
+      <app-coaching-comp [config]="invitationConfig"></app-coaching-comp>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><span l10nTranslate>train_reminders_text</span></ng-template>
+    <ng-template ngbTabContent>
+      <app-coaching-comp [config]="reminderConfig"></app-coaching-comp>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><span l10nTranslate>common_archive_button</span></ng-template>
+    <ng-template ngbTabContent>
+      <app-coaching-comp [config]="archiveConfig"></app-coaching-comp>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

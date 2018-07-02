@@ -1,0 +1,15 @@
+@import '../../../variables';
+.tab-header {
+  padding: 20px 25px 30px 25px;
+  color: $body-text-color;
+  &__title {
+   font-size: 20px;
+   font-family: "proxima_novabold", Arial, sans-serif;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "proxima_novaregular", Arial, sans-serif;
+  }
+}

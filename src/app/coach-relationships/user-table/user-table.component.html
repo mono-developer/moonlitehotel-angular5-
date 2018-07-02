@@ -1,0 +1,12 @@
+<div class="user-table">
+  <app-user-table-header [config]="config" [selected]="isAllSelected" (clickSelectAll)="onClickSelectAll($event)" (clickHeaderAction)="onClickHeaderAction($event)"></app-user-table-header>
+  <div class="user-table__body">
+    <div class="user-table__list">
+      <app-user-row [user]="user" [actionBtn]="config.actionBtnText" [userBtn]='config.userBtn' [isCoach]="config.coachVisible" [contextMenu]="config.contextMenu" (changeChecked)="onChangeUser($event, i)" (clickUserAction)="onClickUserAction($event, i)"  *ngFor="let user of users; trackBy: trackByIndex; let i = index;"></app-user-row>
+    </div>
+    <div class="user-table__alphabet">
+      <app-alphabet-nav *ngIf="config.isAlphaBet" (clickItem)="gotoAlphaBet($event)"></app-alphabet-nav>
+    </div>
+  </div>
+  <app-paging (clickPage)="onChangedPage($event)"></app-paging>
+</div>

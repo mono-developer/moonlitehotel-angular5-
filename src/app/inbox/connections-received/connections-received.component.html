@@ -1,0 +1,43 @@
+<div class="connection-received">
+  <div class="connection-received__header">
+    <div class="connection-received__avatar"></div>
+    <div class="connection-received__sendto">
+      <span l10nTranslate>account_transfer_from_short</span>
+      <img class="connection-received__dropdownimg" [ngClass]="{'isSorted' : this.sortOrders[0]}" src="assets/icons/dropdown-active.svg" (click)="onOrderConnection(0)"/>
+    </div>
+    <div class="connection-received__status">
+      <span l10nTranslate>inbox_connection_status</span>
+      <img class="connection-received__dropdownimg" [ngClass]="{'isSorted' : this.sortOrders[1]}" src="assets/icons/dropdown-active.svg" (click)="onOrderConnection(1)"/>
+    </div>
+    <div class="connection-received__buttons"></div>
+  </div>
+  <div class="connection-received__body">
+    <div class="connection-received__item" *ngFor="let connection of searchedConnections; trackBy: trackById;">
+      <div class="connection-received__avatar">
+        <img class="connection-received__profileimg" src="{{ connection.avatarImageUrl }}" />
+      </div>
+      <div class="connection-received__sendto connection-received__sendto--body">
+        <span>{{ connection.firstName }} {{ connection.lastName }}</span>
+      </div>
+      <div class="connection-received__statusarray">
+        <div class="connection-received__statusitem" *ngFor="let status of connection.shortStatuses; trackBy: trackByIndex;">
+          <span l10nTranslate>{{ status.type }}</span>: {{ status.date | date : 'd MMM, yyyy' }}
+        </div>
+      </div>
+      <div class="connection-received__buttons">
+        <button class="connection-received__button connection-received__button--ignore" l10nTranslate>inbox_ignore_button</button>
+        <button class="connection-received__button connection-received__button--accept" l10nTranslate>inbox_accept_button</button>
+        <div ngbDropdown class="connection-received__dropdownmenu">
+          <img src="assets/icons/settings-gray.svg" id="dropdownblock" ngbDropdownToggle />
+          <div ngbDropdownMenu aria-labelledby="dropdownblock">
+            <div class="dropdown-body">
+              <button class="connection-received__menubutton" l10nTranslate>inbox_block_text</button>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-paging></app-paging>
+  </div>
+</div>

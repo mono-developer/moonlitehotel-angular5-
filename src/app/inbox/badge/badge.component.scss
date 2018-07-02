@@ -1,0 +1,20 @@
+@import '../../../variables';
+.badge {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  font-family: "proxima_novasemibold", Arial, sans-serif;
+  color: $white;
+  margin-left: 10px;
+
+  &__number {
+    width: 24px;
+    height: 24px;
+    background-color: $alert-error-background-color;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

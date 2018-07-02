@@ -1,0 +1,20 @@
+<div class="main-header">
+  <div class="main-header__navigation">
+    <div class="d-flex justify-cotent-center" (click)="gotoBack()">
+      <img class="main-header__img" src="assets/icons/dropdown-left.svg" />
+      <span l10nTranslate>common_text_back</span>
+    </div>
+  </div>
+  <div class="main-header__title" l10nTranslate>train_organization_facilitators</div>
+  <div class="main-header__navigation">
+  </div>  
+</div>
+<div *ngIf = "isLoading">
+  <app-facilitator-overview [facilitator] = 'facilitator'></app-facilitator-overview>
+  <app-upcoming-previous [facilitator] = 'facilitator'></app-upcoming-previous>
+</div>
+
+<div class="main-footer">
+  <button class="main-footer__backbtn" (click)="gotoBack()" l10nTranslate>common_text_back</button>
+</div>
+

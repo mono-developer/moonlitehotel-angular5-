@@ -1,0 +1,85 @@
+<div class="facilitator-overview">
+  <div class="facilitator-overview__avatar">
+    <div class="mx-auto rounded-circle">
+      <img class="facilitator-overview__profileimg" src="{{ facilitator.profile }}" />
+    </div>
+    <div class="facilitator-overview__username">
+      {{ facilitator.name }}
+    </div>
+    <div class="facilitator-overview__jobtitle">
+      {{ facilitator.job_title }}
+    </div>
+
+    <div class="facilitator-overview__motives">
+      <div class="facilitator-overview__avatar-label" l10nTranslate>navigation_motives</div>
+      <div class="facilitator-overview__avatar-content facilitator-overview__avatar-content--font15" [innerHtml]='facilitator.motives | appMotivesHtml'></div>
+    </div>
+
+    <div class="facilitator-overview__conflict">
+      <div class="facilitator-overview__avatar-label" l10nTranslate>navigation_conflict</div>
+      <div class="facilitator-overview__avatar-content facilitator-overview__avatar-content--font14" [innerHtml]='facilitator.conflicts | appConflictSequence'></div>
+    </div>
+  </div>
+
+  <div class="facilitator-overview__ribbon">
+    <app-cert-ribbon [state]='facilitator.state' [certs]='facilitator.certifications'></app-cert-ribbon>
+    <div class="facilitator-overview__id-title" l10nTranslate>
+      train_facilitator_id
+    </div>
+
+    <div class="facilitator-overview__id-content">
+      {{ facilitator.id }}
+    </div>
+  </div>
+
+  <div class="facilitator-overview__training">
+    <div class="facilitator-overview__main-title" l10nTranslate>
+      train_facilitator_rating
+    </div>
+
+    <div class="facilitator-overview__main-content">
+      <div class="facilitator-overview__rate-number">{{ facilitator.rating }}</div>
+      <div class="facilitator-overview__rate-graph">
+        <app-train-rating [rate]='facilitator.rating'></app-train-rating>
+        <div class="facilitator-overview__rate-title" l10nTranslate>train_out_of_5</div>
+      </div>
+      
+    </div>
+    <div class="facilitator-overview__count facilitator-overview__count--mt21">
+      <div class="facilitator-overview__count-number">{{ facilitator.evalutions_count }}</div>
+      <div class="facilitator-overview__count-title" l10nTranslate>train_text_evaluations</div>
+    </div>
+  </div>
+
+  <div class="facilitator-overview__trained">
+    <div class="facilitator-overview__main-title" l10nTranslate>
+      train_text_trained
+    </div>
+
+    <div class="facilitator-overview__count facilitator-overview__count--mt29">
+      <div class="facilitator-overview__count-number facilitator-overview__count-number--bb2">{{ facilitator.trained_count }}</div>
+      <div class="facilitator-overview__count-title facilitator-overview__count-title--lh25" l10nTranslate>account_edit_profile_tab_classes</div>
+    </div>
+
+    <div class="facilitator-overview__count facilitator-overview__count--mt25">
+      <div class="facilitator-overview__count-number facilitator-overview__count-number--bb2">{{ facilitator.learners_count }}</div>
+      <div class="facilitator-overview__count-title facilitator-overview__count-title--lh25" l10nTranslate>train_text_learners</div>
+    </div>
+  </div>
+
+  <div class="facilitator-overview__available">
+    <div class="facilitator-overview__main-title" l10nTranslate>
+        profile_classes_status_available
+    </div>
+
+    <div class="facilitator-overview__count facilitator-overview__count--mt29">
+      <div class="facilitator-overview__count-number facilitator-overview__count-number--bb2">{{ facilitator.toolkits_count }}</div>
+      <div class="facilitator-overview__count-title facilitator-overview__count-title--lh25" l10nTranslate>train_text_toolkits</div>
+    </div>
+
+    <div class="facilitator-overview__count facilitator-overview__count--mt25">
+      <div class="facilitator-overview__count-number facilitator-overview__count-number--bb2">{{ facilitator.credits_count }}</div>
+      <div class="facilitator-overview__count-title facilitator-overview__count-title--lh25" l10nTranslate>inventory_credits_text</div>
+    </div>
+  </div>
+</div>

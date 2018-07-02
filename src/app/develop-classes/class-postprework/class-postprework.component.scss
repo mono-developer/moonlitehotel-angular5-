@@ -1,0 +1,19 @@
+@import '../../../variables';
+.app-prework {
+  display: block;
+  margin: 0 44px;
+  border-bottom: 1px solid $border-gray;
+  &:last-child {
+    border-color: transparent;
+  }
+}
+
+.session-title {
+  font-size: 24px;
+  line-height: 24px;
+  width: 100%;
+  color: $body-text-color;
+  font-family: "proxima_novabold", Arial, sans-serif;
+  padding: 40px 47px 30px 47px;
+  border-bottom: 1px solid $border-gray;
+}
